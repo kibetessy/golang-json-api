@@ -19,6 +19,69 @@ This project helped me understand:
 - **Go 1.21+** - Programming language
 - **net/http** - Go's built-in HTTP server package
 - **encoding/json** - JSON encoding/decoding
+- **Claude AI** - Prompting and code generation
+
+## 🚀 Prompts used in development
+### Prompt 1
+I'm building a Go API and currently have a /products endpoint that returns all products. 
+I want to learn how to:
+
+1. Create a route that accepts a product ID in the URL (like /products/1 or /products/2)
+2. Extract that ID from the URL path
+3. Search through my products slice to find the matching product
+4. Return that single product as JSON
+5. Handle errors when:
+   - The ID is not a valid number
+   - The product doesn't exist (return 404)
+
+My current code structure:
+- I have a Product struct with ID, Name, Price, and InStock fields
+- I have a products slice with sample data
+- I'm using the standard net/http package (no external frameworks)
+
+Please explain:
+- How URL routing works in Go without a router library
+- The difference between /products and /products/ (trailing slash)
+- How to extract and validate the ID from the URL
+- Best practices for error responses in JSON format
+- Common mistakes beginners make with URL parsing
+
+Show me the code step-by-step with clear explanations for each part, 
+and include examples of testing it in the browser and with curl.
+
+### Prompt 2
+I have a working Go API that returns products as JSON with GET requests. 
+Now I want to learn how to accept POST requests to add new products to my API.
+
+What I need to understand:
+
+1. How to check if the incoming request is POST vs GET
+2. How to read JSON data from the request body
+3. How to convert (decode) that JSON into my Product struct
+4. How to validate the incoming data:
+   - Check if required fields are present
+   - Ensure price is positive
+   - Make sure name isn't empty
+5. How to add the new product to my products slice
+6. How to return the created product with a 201 status code
+7. What happens to the data when I restart the server (since it's in-memory)
+
+My current setup:
+- Using standard library (net/http, encoding/json)
+- Products stored in a slice (var products = []Product{...})
+- Already have GET /products working
+- Want to use the SAME /products endpoint for both GET and POST
+
+Please explain:
+- The difference between json.Encoder and json.Decoder
+- Why we use r.Body and what it represents
+- How to structure the handler to handle multiple HTTP methods
+- How to test POST requests (I can't use the browser easily for this)
+- Common validation patterns in Go
+- Best practices for API responses when creating resources
+
+Include curl examples for testing, explain what each flag means,
+and show me what success and error responses should look like.
 
 ## 📂 Project Structure
 
