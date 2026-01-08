@@ -103,7 +103,7 @@ go-api-project/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/go-json-api.git
+git clone https://github.com/yourusername/golang-json-api.git
 cd go-json-api
 ```
 
