@@ -103,13 +103,13 @@ go-api-project/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/go-api-project.git
-cd go-api-project
+git clone https://github.com/yourusername/go-json-api.git
+cd go-json-api
 ```
 
 2. Initialize the Go module (if not already done):
 ```bash
-go mod init go-api-project
+go mod init golang-json-api
 ```
 
 3. Run the server:
